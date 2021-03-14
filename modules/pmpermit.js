@@ -143,7 +143,7 @@ async function handler(id) {
             })
             return out
         }
-    } else if (read.status == "found" && read.permit == false) { // if got a object
+    } /*else if (read.status == "found" && read.permit == false) { // if got a object
         if (read.times == 4) {
             var out = ({
                 mute: true,
@@ -162,7 +162,7 @@ async function handler(id) {
                 return out
             }
         }
-    } else if (read.status == "found" && read.permit == true) {
+    }*/ else if (read.status == "found" && read.permit == true) {
         fs.readFile(__dirname + `/tempdata/${id}.json`, { encoding: 'utf8' },
             async function(err, data) {
                 if (err) {
